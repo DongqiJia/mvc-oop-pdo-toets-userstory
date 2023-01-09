@@ -16,5 +16,7 @@
     </tbody>
 </table>
 
-<a href="<?= URLROOT; ?>/lessen/addTopic/<?= $data['lesId']; ?>">
-    <input type="button" value="Onderwerp Toevoegen"></a>
+<br>
+<a href="<?= URLROOT; ?>/mankement/addMankement">
+    <input type="button" value="Mankement Toevoegen">
+</a>

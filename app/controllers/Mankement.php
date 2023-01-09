@@ -25,4 +25,12 @@ class Mankement extends Controller {
         ];
         $this->view('mankement/index', $data);
     }
+    public function addMankement()
+    {
+        $data = [
+            'title' => 'Invoeren Mankement',
+            'Kenteken' => "TH-78-KL --- Ferari" ,
+        ];
+        $this->view('mankement/addmankement', $data);
+    }
 }
