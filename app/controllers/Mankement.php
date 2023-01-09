@@ -10,19 +10,17 @@ class Mankement extends Controller {
         $result = $this->mankementModel->getMankement();
         $rows = '';
 
-        foreach ($result as $info) {
-            $d = new DateTimeImmutable($info->DatumTijd, new DateTimeZone('Europe/Amsterdam'));
+        foreach ($result as $mankement) {
             $rows .= "<tr>
-           <td>{$d->format('d-m-Y')}</td>
-           <td>{$d->format('H:i')}</td>
-           <td>$info->LENA</td>
-           <td><a href='" . URLROOT ."/lessen/lesinfo/{$info->Id}'><img src='" . URLROOT . "/img/b_help.png' alt='Lesinfo'></a></td>
-           <td><a href='" . URLROOT . "/lessen/topicslesson/{$info->Id}'><img src='" . URLROOT . "/img/b_ftext.png' alt='Onderwerp'></a></td>
+           <td>$mankement->Datum</td>
+           <td>$mankement->Mankement</td>
        </tr>";
         }
-        
+
         $data=[ 
             'title' => "Overzicht Mankementen",
+            'Email' => "manhoi@gmail.com",
+            'Kenteken'=> "TH-78-KL --- Ferrari",
             'rows' => $rows
         ];
         $this->view('mankement/index', $data);

@@ -1,6 +1,8 @@
-<h3><?= $data['title']; ?></h3>
+<h2><?= $data['title']; ?></h2>
 
 <h4>Auto van instructeur: Manhoi</h4>
+<h4><?= 'E-mailadres: ' .  $data['Email'] ?></h4>
+<h4><?= 'Kenteken Auto: ' .  $data['Kenteken'] ?></h4>
 
 <table border='1'>
     <thead>
@@ -13,3 +15,6 @@
         <?= $data['rows'] ?>
     </tbody>
 </table>
+
+<a href="<?= URLROOT; ?>/lessen/addTopic/<?= $data['lesId']; ?>">
+    <input type="button" value="Onderwerp Toevoegen"></a>
