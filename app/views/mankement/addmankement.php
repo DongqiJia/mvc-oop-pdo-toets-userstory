@@ -8,6 +8,7 @@
     <br>
     <input type="text " name="Mankement" id="Mankement">
     <br>
+
     <div class="MankementError"><?= $data['MankementError'];?></div>
     <input type="hidden" name="AutoId" value="<?= $data['AutoId'];?>">
 

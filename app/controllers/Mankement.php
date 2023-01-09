@@ -5,7 +5,7 @@ class Mankement extends Controller {
     {
         $this->mankementModel = $this->model('Mankementen');
     }
-    public function index()
+    public function index($AutoId = 2)
     {
         $result = $this->mankementModel->getMankement();
         $rows = '';
@@ -21,6 +21,7 @@ class Mankement extends Controller {
             'title' => "Overzicht Mankementen",
             'Email' => "manhoi@gmail.com",
             'Kenteken'=> "TH-78-KL --- Ferrari",
+            'AutoId' => $AutoId,
             'rows' => $rows
         ];
         $this->view('mankement/index', $data);
